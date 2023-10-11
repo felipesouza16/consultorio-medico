@@ -1,5 +1,9 @@
 # Consultório médico
 
+<div align="center"> 
+  <img src="https://github.com/felipesouza16/consultorio-medico/assets/86385745/434a7d9b-019b-4598-8f5f-a022d8b9cf5f" width="700px" />
+</div>
+
 React + TypeScript + Vite + Bootstrap
 
 Tem a finalidade de atuar como um gerenciador de um consultório médico.
