@@ -8,7 +8,7 @@ React + TypeScript + Vite + Bootstrap
 
 Tem a finalidade de atuar como um gerenciador de um consultório médico.
 
-Alguns dos dados estão sendo gravados no localStorage em ausência de back-end.
+Alguns dos dados estão sendo gerenciados no localStorage em ausência de back-end.
 
 ## Deploy
 
