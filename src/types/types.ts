@@ -10,6 +10,7 @@ export type WarningTable = {
 };
 
 export type Medic = {
+  id: number;
   nome: string;
   especializacao: string;
   disponivel: boolean;
@@ -25,6 +26,7 @@ export type Diary = {
   data: string;
   medico?: Medic;
   paciente?: Patient;
+  valor?: string;
 };
 
 export type Patient = {

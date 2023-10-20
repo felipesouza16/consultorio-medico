@@ -9,6 +9,7 @@ import { Diary, Medic, Patient } from "@/src/types/types";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Col } from "react-bootstrap";
+import { Pen } from "@/src/assets/pen";
 
 export const Agendamentos = () => {
   const navigate = useNavigate();
@@ -38,6 +39,7 @@ export const Agendamentos = () => {
       data: new Date().toISOString(),
       horario: data.horario,
       medico: {
+        id: currentMedicos[Number(data.medico)]?.id || 0,
         nome: currentMedicos[Number(data.medico)]?.nome || "",
         disponivel: currentMedicos[Number(data.medico)]?.disponivel || true,
         especializacao:
@@ -56,9 +58,7 @@ export const Agendamentos = () => {
 
   const handleCloseModal = () => {
     setOpen(false);
-    setTimeout(() => {
-      setCurrentDiary(null);
-    }, 500);
+    setCurrentDiary(null);
   };
 
   const handleOpenModal = (horario: string) => {
@@ -71,7 +71,7 @@ export const Agendamentos = () => {
       <Modal
         isOpen={open}
         handleClose={handleCloseModal}
-        diary={currentDiary}
+        initialData={currentDiary}
         handleConfirm={handleConfirmModal}
         horarioAgen={horario}
       />
@@ -172,7 +172,7 @@ export const Agendamentos = () => {
                           >
                             <Trash />
                           </button>
-                          {/* <button
+                          <button
                             className="btn btn-light d-flex"
                             style={{ borderRadius: "9999px" }}
                             type="button"
@@ -186,7 +186,7 @@ export const Agendamentos = () => {
                             }}
                           >
                             <Pen />
-                          </button> */}
+                          </button>
                         </div>
                       ) : (
                         <div

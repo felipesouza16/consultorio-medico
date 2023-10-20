@@ -7,21 +7,20 @@ export const useLocalStorage = () => {
   const generateMedicosStorage = () => {
     const medicos: Medic[] = [
       {
+        id: 0,
         nome: "Dr. X",
         especializacao: "Pediatra",
         disponivel: true,
       },
       {
+        id: 1,
         nome: "Dr. Y",
         especializacao: "Cardiologista",
         disponivel: true,
       },
+      { id: 2, nome: "Dra. Z", especializacao: "Geral", disponivel: true },
       {
-        nome: "Dra. Z",
-        especializacao: "Geral",
-        disponivel: true,
-      },
-      {
+        id: 3,
         nome: "Dra. A",
         especializacao: "Genicologista",
         disponivel: false,
